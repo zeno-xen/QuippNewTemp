@@ -4,6 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+
   <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.css" />
   <link rel="stylesheet" href="assets/vendor/owl.carousel/owl.carousel.min.css" />
   <link rel="stylesheet" href="assets/vendor/owl.carousel/owl.theme.default.min.css" />
@@ -38,20 +41,17 @@
                 <div class="submenu-container" role="menu">
                   <ul class="submenu" role="none">
                     <li role="none">
-                      <a href="#" role="menuitem" tabindex="-1">Publishing Services</a>
+                      <a href="Publishing-services.html" role="menuitem" tabindex="-1">Publishing Services</a>
                     </li>
                     <li role="none">
-                      <a href="#" role="menuitem" tabindex="-1">Marketing Services</a>
-                    </li>
-                    <li role="none">
-                      <a href="#" role="menuitem" tabindex="-1">Marketing</a>
+                      <a href="Marketing-services.html" role="menuitem" tabindex="-1">Marketing Services</a>
                     </li>
                   </ul>
                 </div>
               </li>
 
               <li role="none" aria-haspopup="true" aria-expanded="false">
-                <a href="#about" role="menuitem" tabindex="-1">Multimedia <i class="bi bi-chevron-down"></i></a>
+                <a href="#multimedia" role="menuitem" tabindex="-1">Multimedia <i class="bi bi-chevron-down"></i></a>
                 <div class="submenu-container" role="menu">
                   <ul class="submenu" role="none">
                     <li role="none">
@@ -99,13 +99,88 @@
   </header>
 
   <!-- HOME -->
-  <section id="home">
-    <div class="home"></div>
+  <div class="quippy-background"></div>
+  <section id="banner">
+    <div class="banner">
+      <div class="banner-text">
+        <h2>The Path <span>to Publishing Excellence</span></h2>
+        <hr>
+        <h3>WINNING MARKETING STRATEGIES THAT AUTHORS DESERVE</h3>
+        <div class="social-icons">
+          <ul>
+            <li><a href="https://www.facebook.com/quippyquill.official/" target="_blank"><i
+                  class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a href="https://twitter.com/quippyquill?s=21" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            </li>
+            <li><a href="https://www.instagram.com/quippyquill.official/" target="_blank"><i
+                  class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://www.youtube.com/@QuippyQuillOfficial" target="_blank"><i
+                  class="fa-brands fa-youtube"></i></a></li>
+            <li><a
+                href="https://www.pinterest.ph/QuippyQuill/?invite_code=c96ed876596d4357a697c4f6878f25c8&sender=912401343166207936"
+                target="_blank"><i class="fa-brands fa-pinterest"></i></a></li>
+            <li><a href="https://www.tiktok.com/@quippyquill.official" target="_blank"><i
+                  class="fa-brands fa-tiktok"></i></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="banner-image">
+        <img src="assets/images/logo/landing1.png" alt="image">
+      </div>
+    </div>
+  </section>
+  <section id="featured-authors">
+    <h2 class="heading-title">Featured Authors</h2>
+    <div class="featured-container">
+      <div class="swiper-container AuthorSwiper">
+        <div class="swiper-slide">
+          <div class="featured-authors-container">
+            <div class="featured-authors-image">
+              <img
+                src="<?php echo get_stylesheet_directory_uri().'/assets/images/featured-authors/April_featured-authors-Sherry_Engle.png';?>"
+                alt="image">
+            </div>
+            <div class="featured-authors-text">
+              <h3>Sherry Engle</h3>
+              <h4>
+                Sherry Engle is an author, scholar, and advocate for women's
+                contributions to American theater history. Her work includes
+                New Women Dramatists in America, 1890-1920 which focuses on
+                reclaiming the voices of pioneering female playwrights who
+                challenged societal norms and contributed to Progressive Era
+                theater. She co-edited with Susan Croft Thousands of Noras:
+                Short Plays by Women,1875-1920, an international collection of
+                various, often "undiscovered" works by women that range from
+                comedy to social commentary.
+              </h4>
+
+
+              <br>
+              <span>Dr. Engle's research shines a light on playwrights who have long been
+                overlooked. Her writing not only documents the vibrant and often radical theatrical
+                work of women in the late 19th and early 20th centuries, but also situates their
+                influence within a broader movement for gender and artistic equality.</span>
+              <p>
+                Through her authorship, Sherry Engle has created essential resources
+                for scholars, students, and theater practitioners alike—reviving hidden
+                legacies and inspiring new generations to explore the rich tapestry
+                of women's voices in drama.
+
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--<div class="swiper-button-next next"></div>-->
+      <!--<div class="swiper-button-prev prev"></div>-->
+    </div>
+    </div>
   </section>
   <!-- ABOUT -->
   <section id="about"></section>
   <!-- SERVICES -->
   <section id="services"></section>
+  <section id="multimedia"></section>
   <!-- CONTACT -->
   <section id="contact"></section>
 

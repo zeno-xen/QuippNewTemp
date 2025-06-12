@@ -73,31 +73,65 @@ window.addEventListener("scroll", function() {
     header.classList.toggle("sticky", window.scrollY > 0);
 });
 
-//  SCROLl SECTIONS ACTIVE NAV
+// Close mobile nav on menu link click
+const navLinks = document.querySelectorAll('.navbar-menu a[href^="#"]');
+
+navLinks.forEach(link => {
+  link.addEventListener('click', function (e) {
+    // Optional: smooth scroll to section
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Only close if mobile nav is open
+    if (navbarMenu.classList.contains('active')) {
+      hamburger.setAttribute("aria-expanded", false);
+      navbarMenu.classList.remove("active");
+      overlay.classList.remove("active");
+    }
+  });
+});
+// 
 const sections = document.querySelectorAll('section[id]')
 
-const scrollActive = () =>{
-    const scrollDown = window.scrollY
+const scrollActive = () => {
+    const scrollDown = window.scrollY;
 
-    sections.forEach(current =>{
+    sections.forEach(current => {
         const sectionHeight = current.offsetHeight,
               sectionTop = current.offsetTop - 58,
               sectionId = current.getAttribute('id'),
-              sectionsClass = document.querySelector('.navbarMenu a[href*=' + sectionId + ']')
-        
-        if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight){
-            sectionsClass.classList.add('active')
-        }else{
-            sectionsClass.classList.remove('active')
+              sectionsClass = document.querySelector('.navbar-menu a[href*=' + sectionId + ']');
+
+        if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
+            sectionsClass.classList.add('active');
+        } else {
+            sectionsClass.classList.remove('active');
         }
-    })
-}
-window.addEventListener('scroll', scrollActive)
+    });
+};
+window.addEventListener('scroll', scrollActive);
+// MARKETING SERVICES MODALS
+        var modals = document.querySelectorAll(".modal");
 
-const scrollUp = () =>{
-    const scrollUp = document.getElementById('scroll-up')
+        // Get the buttons that opens the modals
+        var btns = document.querySelectorAll("[id^='myBtn']");
 
-    this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
-                        : scrollUp.classList.remove('show-scroll')
-}
-window.addEventListener('scroll', scrollUp)
+        // Get the <span> elements that closes the modals
+        var spans = document.querySelectorAll(".close");
+
+        // Loop through each button to add onclick event
+        btns.forEach(function (btn, index) {
+            btn.onclick = function () {
+                modals[index].style.display = "block";
+            };
+        });
+
+        // Loop through each span to add onclick event
+        spans.forEach(function (span) {
+            span.onclick = function () {
+                span.parentNode.parentNode.style.display = "none";
+            };
+        });
